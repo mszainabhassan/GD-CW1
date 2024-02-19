@@ -1,0 +1,5 @@
+Percentage of contribution:
+Member 1:  %
+Member 2:  %
+
+Explain contribution in words here.
