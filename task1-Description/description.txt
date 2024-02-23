@@ -1,1 +1,49 @@
-description
+System Outline: 
+
+Our system is an Event Ticket Booking System. Event organizers can effortlessly publish their events, while attendees can conveniently view, and buy tickets to a wide range of events, such as webinars and conferences. The ticket booking system application has three major user roles (Customers, Organizers, and Administrators). The primary stakeholders include "Customer" (users attending events), "Organizer" (users creating and managing events), and "Admin" (system administrator responsible for event approval/rejection). Entities within the system include Events, Customers, Organizers, Admin, Wishlist. 
+
+The use cases are structured around common event management activities. Customers can "View Events," "Book Events," "Add Events into Wishlist," and "Provide Ratings." Organizers have the capability to "Create Events" and "View Events". The Admin has the authority to "Approve/Reject Events" ,"Create Events" and "View Events".  
+
+Explanation of Invariants: 
+
+Approve/Reject Event: 
+
+Invariant: An event must be approved by the Admin before becoming visible to Customers. 
+
+Explanation: Ensures that only validated and authorized events are displayed to users, maintaining the integrity of the system. 
+
+View Events: 
+
+Invariant: Customers can view events which are approved by admin. 
+
+Explanation: Ensures that customers have access only to events that are approved by admin preserving event authencity. 
+
+Create Events: 
+
+Invariant: Organizers must provide essential event details during the creation process. 
+
+Explanation: Guarantees that events are created with necessary information, preventing incomplete or inaccurate entries. 
+
+Book Free Events: 
+
+Invariant: A customer can book a free event directly without paying but only if tickets are available. 
+
+Explanation: Ensures the booking process for events is only when tickets are available. 
+
+Book Paid Events: 
+
+Invariant: A customer can only book a paid event if payment is successfully processed. 
+
+Explanation: Ensures that the booking process for paid events is linked to a successful financial transaction, avoiding unpaid reservations. 
+
+Add Events into Wishlist: 
+
+Invariant: Customers can only add events to the wishlist that are not already booked. 
+
+Explanation: Prevents customers from duplicating their interest by adding the same event to both the wishlist and booked events. 
+
+Provide Ratings: 
+
+Invariant: Customers can only provide ratings for events they have attended. 
+
+Explanation: Maintains the credibility of event ratings by restricting feedback to users who have firsthand experience with the event. 
