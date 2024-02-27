@@ -10,19 +10,59 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Hw1" basePackage="gendev" disposableProviderFactory="true"
       ecorePackage="hw1.ecore#/">
-    <genClasses ecoreClass="hw1.ecore#//Customer">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Customer/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Customer/contactNumber"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Customer/age"/>
+    <genClasses ecoreClass="hw1.ecore#//User">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//User/username"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//User/contactNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//User/age"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//User/userId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//User/email"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//User/password"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hw1.ecore#//User/bookedevent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hw1.ecore#//User/wishlist"/>
     </genClasses>
     <genClasses ecoreClass="hw1.ecore#//Event">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Event/eventId"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Event/eventName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Event/eventDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Event/eventLocation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Event/isApproved"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hw1.ecore#//Event/bookedevent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hw1.ecore#//Event/wishlist"/>
     </genClasses>
     <genClasses ecoreClass="hw1.ecore#//Organizer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Organizer/organizerName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Organizer/organizerId"/>
     </genClasses>
-    <genClasses ecoreClass="hw1.ecore#//Wishlist"/>
-    <genClasses ecoreClass="hw1.ecore#//Admin"/>
+    <genClasses ecoreClass="hw1.ecore#//Wishlist">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Wishlist/eventId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Wishlist/userId"/>
+    </genClasses>
+    <genClasses ecoreClass="hw1.ecore#//EventBooked">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//EventBooked/EventBookId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//EventBooked/eventId"/>
+    </genClasses>
+    <genClasses ecoreClass="hw1.ecore#//Rating">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Rating/ratingId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Rating/stars"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Rating/comment"/>
+    </genClasses>
+    <genClasses ecoreClass="hw1.ecore#//Payment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Payment/paymentId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Payment/amount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Payment/paymentDate"/>
+    </genClasses>
+    <genClasses ecoreClass="hw1.ecore#//FreeEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//FreeEvent/maxParticipants"/>
+    </genClasses>
+    <genClasses ecoreClass="hw1.ecore#//PaidEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//PaidEvent/ticketPrice"/>
+    </genClasses>
+    <genClasses ecoreClass="hw1.ecore#//BookedEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//BookedEvent/bookEventId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//BookedEvent/eventId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//BookedEvent/userId"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hw1.ecore#//BookedEvent/rating"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hw1.ecore#//BookedEvent/payment"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
