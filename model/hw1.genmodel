@@ -17,8 +17,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//User/userId"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//User/email"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//User/password"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hw1.ecore#//User/bookedevent"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hw1.ecore#//User/wishlist"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hw1.ecore#//User/bookedEvents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hw1.ecore#//User/wishlistItems"/>
     </genClasses>
     <genClasses ecoreClass="hw1.ecore#//Event">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Event/eventId"/>
@@ -26,16 +26,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Event/eventDate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Event/eventLocation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Event/isApproved"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hw1.ecore#//Event/bookedevent"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hw1.ecore#//Event/wishlist"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference hw1.ecore#//Event/bookedInstances"/>
     </genClasses>
     <genClasses ecoreClass="hw1.ecore#//Organizer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Organizer/organizerName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Organizer/organizerId"/>
-    </genClasses>
-    <genClasses ecoreClass="hw1.ecore#//Wishlist">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Wishlist/eventId"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Wishlist/userId"/>
     </genClasses>
     <genClasses ecoreClass="hw1.ecore#//EventBooked">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//EventBooked/EventBookId"/>
@@ -61,8 +56,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//BookedEvent/bookEventId"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//BookedEvent/eventId"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//BookedEvent/userId"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hw1.ecore#//BookedEvent/rating"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hw1.ecore#//BookedEvent/payment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hw1.ecore#//BookedEvent/eventRatings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hw1.ecore#//BookedEvent/paymentFor"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
