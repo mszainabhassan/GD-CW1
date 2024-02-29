@@ -1,6 +1,6 @@
 System Outline: 
 
-Our system is an Event Ticket Booking System. Event organizers can effortlessly publish their events, while attendees can conveniently view, and book tickets to a wide range of events, such as webinars and conferences. The ticket booking system application has three major user roles (Customers, Organizers, and Administrators). The primary stakeholders include "Customer" (users attending events), "Organizer" (users creating and managing events), and "Admin" (system administrator responsible for event approval/rejection). Entities within the system include Event, User, Organizer, BookedEvent ,FreeEVent , PaidEvent ,PaymentDetail and Rating. 
+Our system is an Event Ticket Booking System. Event organizers can effortlessly publish their events, while customers can view, and book tickets to a wide range of events, such as webinars and conferences. The ticket booking system application has three major user roles (Customers, Organizers, and Admin). The primary stakeholders include "Customer" (users attending events), "Organizer" (users creating and managing events), and "Admin" (system administrator responsible for event approval/rejection). Entities within the system include Event, User, Organizer, BookedEvent ,FreeEVent , PaidEvent ,PaymentDetail and Rating.
 
 The use cases are structured around common event management activities. Customers can "View Events," "Book Events either free/paid," "Add Events into Wishlist," and "Provide Ratings." Organizers have the capability to "Create Events" and "View Events". The Admin has the authority to "Approve/Reject Events" with this he can do things which a customer can do.  
 
@@ -8,12 +8,12 @@ Explanation of Invariants:
 
 Invariant 1 Explanation:
 
-In the context of PaidEvent: For all the bookedEvent instances, eventIsFree attribute must be false.
+In the context of PaidEvent: For all the bookedEvent instances, eventIsFree attribute must be false.This invariant ensures that all bookedEvent of type PaidEvent must have eventIsFree attribute false. for example there are 4 instances of bookedevent which are PaidEvent then eventIsFree attribute should be equal to false for all of them.
 
 Invariant 2 Explanation:
 
-In the context of User: If any BookedEvent are not free then it should have PaymentDetails and should not be null.
+In the context of User: If any BookedEvent are not free then it should have PaymentDetails and should not be null.This invariant is designed to ensure that if a user has booked a non-free event (BookedEvent), there must be associated payment details. This implies that the system expects payment information to be present for any booking that involves a paid event.
 
 Invariant 3 Explanation:
 
-In the context of Event: if the attribute isApproved is False then it should not been booked means BookedEvent Instances must be less than 1 or zero.
+In the context of Event: if the attribute isApproved is False then it should not been booked means BookedEvent Instances must be less than 1 or zero.This invariant safeguards against booking events that haven't been approved. If an event is not approved (isApproved is False), it should not have any bookings (BookedEvent instances), ensuring that only approved events can be booked. This can be seen as a constraint to maintain consistency in the system's data.
