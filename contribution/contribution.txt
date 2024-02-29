@@ -1,5 +1,15 @@
 Percentage of contribution:
-Member 1:  %
-Member 2:  %
+Member 1:  50%
+Member 2:  50%
 
-Explain contribution in words here.
+Zainab(zh177)
+Task1
+Task2(a)
+Task2(b)-reviewed
+Task3(a)
+
+Callum(cr330)
+Task2(b)
+Task3(a)-reviewed
+Task3(b)
+Task4
