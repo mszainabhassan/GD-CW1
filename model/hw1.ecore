@@ -52,12 +52,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="organizerId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EventBooked">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EventBookId" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventId" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Rating">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ratingId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
