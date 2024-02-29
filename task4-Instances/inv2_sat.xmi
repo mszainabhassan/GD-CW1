@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hw1:User xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:hw1="http://www.example.org/hw1"
+    xsi:schemaLocation="http://www.example.org/hw1 ../model/hw1.ecore">
+  <bookedEvents
+      bookEventId="1"
+      eventIsFree="true"/>
+  <bookedEvents
+      bookEventId="2"
+      eventIsFree="true"/>
+  <bookedEvents
+      bookEventId="3"/>
+  <paymentDetails
+      cardNumber="0700000000000007"
+      cardSecurityCode="567"
+      nameOnCard="MS JANE DOE"
+      cardExpiryMonth="5"
+      cardExpiryYear="19"/>
+</hw1:User>

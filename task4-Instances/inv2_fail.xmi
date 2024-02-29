@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hw1:User xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:hw1="http://www.example.org/hw1"
+    xsi:schemaLocation="http://www.example.org/hw1 ../model/hw1.ecore">
+  <bookedEvents
+      bookEventId="1"/>
+</hw1:User>
