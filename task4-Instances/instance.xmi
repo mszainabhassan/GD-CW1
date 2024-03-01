@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="ASCII"?>
-<hw1:BookingSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:hw1="http://www.example.org/hw1"/>
+<hw1:BookingSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hw1="http://www.example.org/hw1">
+  <users username="Marley" wishlistItems="//@events.0">
+    <bookedEvents eventIsFree="true"/>
+    <paymentDetails/>
+  </users>
+  <users username="Scrooge" wishlistItems="//@events.0">
+    <paymentDetails/>
+  </users>
+  <events xsi:type="hw1:FreeEvent" bookedInstances="//@users.0/@bookedEvents.0"/>
+</hw1:BookingSystem>

@@ -39,6 +39,11 @@ public class Task4 {
 	    PaymentDetails paymentDetails2 = factory.createPaymentDetails();
 	    user2.setPaymentDetails(paymentDetails2);
 	    
+		// Attach things to root!
+		root.getUsers().add(user1);
+		root.getUsers().add(user2);
+		root.getEvents().add(freeEvent1);
+	    
 	    Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
 	    Map<String,Object> map = reg.getExtensionToFactoryMap();
 	    
