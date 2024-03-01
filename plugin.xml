@@ -5,5 +5,11 @@
 -->
 
 <plugin>
-
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated hw1 -->
+      <package
+            uri="http://www.example.org/hw1"
+            class="hw1.Hw1Package"
+            genModel="model/hw1.genmodel"/>
+   </extension>
 </plugin>
